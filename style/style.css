@@ -82,3 +82,26 @@ nav ul li:hover{
 .menu-button{
     display: none;
 }
+
+.header-botom-side{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.header-botom-side-left{
+    height: 100%;
+    flex-basis: 50%;
+}
+
+.header-botom-side-right{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-botom-side-right img{
+    width: 115%;
+}
