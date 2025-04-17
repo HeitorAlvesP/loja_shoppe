@@ -7,6 +7,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    max-width: 100%;
     
 }
 
@@ -163,6 +164,8 @@ header{
     nav{
         position: absolute;
         background-color: var(--cor_primeria);
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
         width: 100%;
         top: 46px;
         display: none;
@@ -187,6 +190,10 @@ header{
 /*  HEADER *//*  HEADER *//*  HEADER *//*  HEADER */
 
 /* MAIN CONTENT *//* MAIN CONTENT *//* MAIN CONTENT */
+main{
+    background-color: #ebebeb;
+}
+
 .gray-background{
     background-color: var(--cor_primeria); 
     box-shadow: 10px 0px 10px var(--cor_primeria);
@@ -221,7 +228,55 @@ header{
     max-width: 100%;
 }
 
+.cols-4 img{
+    max-width: 100%;
+}
+
 .cols-4{
     grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
 
+.cols>*{
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.cols>*:hover{
+    transform: translateY(-1rem)
+}
+
+.section-title{
+    text-align: center;
+    margin-top: 4rem;
+    font-size: 1.8rem
+}
+
+.subtitle-underline{
+    width: 100px;
+    height: 5px;
+    background-color: var(--cor_segundaria);
+    border-radius: 99999px;
+    margin: 8px auto 0 auto;
+}
+
+.produtos{
+    color: #2c2c2c;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.produto-nome{
+    font-weight: 600;
+    margin-top: 0.4rem;
+}
+
+.rate{
+    color: var(--cor_segundaria);
+    font-size: 1.3rem;
+}
+
+.produto-price span{
+    font-weight: 600;
 }
