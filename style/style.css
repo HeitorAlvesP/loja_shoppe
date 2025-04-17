@@ -188,7 +188,8 @@ header{
 
 /* MAIN CONTENT *//* MAIN CONTENT *//* MAIN CONTENT */
 .gray-background{
-    background-color: var(--cor_primeria);
+    background-color: var(--cor_primeria); 
+    box-shadow: 10px 0px 10px var(--cor_primeria);
 }
 
 .page-inner-content{
@@ -196,14 +197,19 @@ header{
     margin: 0 auto;
 }
 
-/* .cols{
+.cols{
     display: grid;
     justify-content: space-evenly;
     padding: 4rem 1rem;
+}
+
+
+/* .cols-3{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
 } */
 
-
-.cols {
+.cols-3 {
     display: grid;
     grid-template-columns: repeat(3, auto);  
    gap: 1rem;
@@ -211,8 +217,11 @@ header{
     justify-content: center; 
 }
 
+.cols-3 img{
+    max-width: 100%;
+}
 
-.cols-3{
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
+.cols-4{
+    grid-template-columns: repeat(4, 1fr);
+
 }
