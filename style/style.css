@@ -1,14 +1,18 @@
 :root {
     --cor_primeria: #1C082D;
     --cor_segundaria: #0295E5;
+    --cinza_escuro: #2c2c2c;
 }
   
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    max-width: 100%;
-    
+    /* max-width: 100%; */
+}
+
+img{
+    border-radius: 3px;
 }
 
 body{
@@ -228,13 +232,13 @@ main{
     max-width: 100%;
 }
 
-.cols-4 img{
-    max-width: 100%;
-}
-
 .cols-4{
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
+}
+
+.cols-4 img{
+    max-width: 100%;
 }
 
 .cols>*{
