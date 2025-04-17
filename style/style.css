@@ -1,5 +1,5 @@
 :root {
-    --cinza_escuro: #2c2c2c;
+    --cor_primeria: #1C082D;
 }
   
 *{
@@ -20,11 +20,11 @@ body{
 }
 
 .navbar {
-    background-color:var(--cinza_escuro);
+    background-color:var(--cor_primeria);
     padding: 1rem;
     position: sticky;
     top: 0;
-    box-shadow: 10px 0px 10px var(--cinza_escuro);
+    box-shadow: 10px 0px 10px var(--cor_primeria);
     z-index: 99;
 }
 
@@ -41,8 +41,9 @@ body{
 
 .logo span{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(6, 104, 231);
+    color: #0295E5
 }
+
 
 nav ul{
     display: flex;
@@ -53,4 +54,31 @@ nav ul{
 .nav-icon-container{
     display: flex;
     align-items: center;
+}
+
+.nav-icon-container img{
+    width: 30px;
+    cursor: pointer;
+}
+
+.nav-icon-container img:first-child{
+    margin-right: 1rem;
+
+}
+
+nav ul li{
+    color: #ffff;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+nav ul li:hover{
+    transform: translateY(-3px);
+    color: #ffffffd0;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+.menu-button{
+    display: none;
 }
