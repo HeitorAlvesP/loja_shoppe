@@ -1,5 +1,6 @@
 :root {
     --cor_primeria: #1C082D;
+    --cor_segundaria: #0295E5;
 }
   
 *{
@@ -43,7 +44,7 @@ body{
 
 .logo span{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #0295E5
+    color: var(--cor_segundaria)
 }
 
 
@@ -115,7 +116,7 @@ header{
 
 .header-bottom-side-left button{
     /* background-color: #0084ff; */
-    background-color: var(--cor_primeria);
+    background-color: var(--cor_segundaria);
     border: none;
     cursor: pointer;
     padding: 0.8rem 3.8rem;
@@ -128,7 +129,7 @@ header{
 
 .header-bottom-side-left button:hover{
     /* background-color: #004c94; */
-    background-color: #3e1168;
+    background-color: #00669c;
 }
 
 .header-bottom-side-right{
@@ -141,7 +142,7 @@ header{
 .header-bottom-side-right img{
     width: 115%;
 }
-/*  HEADER *//*  HEADER *//*  HEADER *//*  HEADER */
+
 
 /*media queries*//*media queries*//*media queries*/
 @media (max-width: 800px){
@@ -182,4 +183,36 @@ header{
     }
 
 
+}
+/*  HEADER *//*  HEADER *//*  HEADER *//*  HEADER */
+
+/* MAIN CONTENT *//* MAIN CONTENT *//* MAIN CONTENT */
+.gray-background{
+    background-color: var(--cor_primeria);
+}
+
+.page-inner-content{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* .cols{
+    display: grid;
+    justify-content: space-evenly;
+    padding: 4rem 1rem;
+} */
+
+
+.cols {
+    display: grid;
+    grid-template-columns: repeat(3, auto);  
+   gap: 1rem;
+    padding: 4rem 1rem;
+    justify-content: center; 
+}
+
+
+.cols-3{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
 }
