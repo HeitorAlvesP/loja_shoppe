@@ -8,7 +8,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    /* max-width: 100%; */
+    max-width: 100%;
 }
 
 img{
@@ -81,6 +81,19 @@ nav ul li{
 }
 
 nav ul li:hover{
+    transform: translateY(-2px);
+    color: #ffffffd0;
+    transition: all 0.3s;
+    font-weight: bold;
+}
+
+nav ul li a{
+    color: #ffff;
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+nav ul li a:hover{
     transform: translateY(-2px);
     color: #ffffffd0;
     transition: all 0.3s;
