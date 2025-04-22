@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha - MyFily</title>
+    <link rel="stylesheet" href="../style/esqueceu_senha.css">
+
+</head>
+<body>
+    <div class="center">
+        <div class="card">
+            <div class="content">
+                <div class="back">
+                    <div class="back-content">
+
+                        <h3 class="heading">Recuperar Senha</h3>
+
+                        <div class="input-box">
+                            <input type="email" required>
+                            <span>Email</span>
+                        </div>
+
+                        <div class="input-box">
+                            <input type="text" id="verification-code" required oninput="showPasswordFields()">
+                            <span>Código de Verificação</span>
+                        </div>
+
+                        <div id="password-fields" class="hidden">
+                            <div class="input-box">
+                                <input type="password" required>
+                                <span>Nova Senha</span>
+                            </div>
+
+                            <div class="input-box">
+                                <input type="password" required>
+                                <span>Confirmar Nova Senha</span>
+                            </div>
+                        </div>
+
+                        <button class="btn">Redefinir Senha</button>
+                        
+                        <div>
+                            <a href="login.html" class="cadastro">Voltar para o Login</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../javascript/att_senha.js"></script>
+    <script>
+        console.log('frontend/pages/esqueceu_senha.html')
+    </script>
+</body>
+</html>
