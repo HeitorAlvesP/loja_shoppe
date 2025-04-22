@@ -170,7 +170,7 @@ body {
     width: 80%;
     cursor: pointer;
     background-color: var(--cor_segundaria);
-    transition: 0.5s;
+    transition: 0.2s;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 600;
@@ -179,6 +179,11 @@ body {
     color: #fff;
     border: none;
 }
+
+button:hover{
+    background-color: #00669c;
+}
+
 
 .cadastro{
     line-height: 2;

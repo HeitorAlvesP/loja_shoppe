@@ -79,6 +79,17 @@ function validatePasswords() {
     const password = document.getElementById('new-password').value;
     const confirmPassword = document.getElementById('confirm-password').value;
 
+    // Swal.fire({
+    //     icon: 'info',
+    //     title: 'Senha deve ter:',
+    //     text: `.Conter no mínimo 8 caracteres.
+    //     .Conter pelo menos uma letra maiúscula/minúscula..
+    //     .Conter pelo menos um número.
+    //     .Conter pelo menos um caractere especial.`,
+    //     timer: 2500,
+    //     showConfirmButton: false
+    // });
+
     const minLength = /.{8,}/;
     const hasUpper = /[A-Z]/;
     const hasLower = /[a-z]/;
@@ -156,5 +167,4 @@ function validatePasswords() {
         window.location.href = 'login.html';
     });;
 
-    // Aqui você pode adicionar o envio da nova senha para o backend
 }
