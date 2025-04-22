@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar Senha - MyFily</title>
+
     <link rel="stylesheet" href="../style/esqueceu_senha.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 <body>
@@ -43,7 +45,7 @@
                         <!-- Botões -->
                         <button id="send-code-btn" class="btn" onclick="sendCode()">Enviar Código</button>
                         <button id="confirm-code-btn" class="btn hidden" onclick="confirmCode()">Confirmar Código</button>
-                        <button id="reset-password-btn" class="btn hidden">Redefinir Senha</button>
+                        <button id="reset-password-btn" class="btn hidden" onclick="validatePasswords()">Redefinir Senha</button>
                         
                         <div>
                             <a href="login.html" class="cadastro">Voltar para o Login</a>
