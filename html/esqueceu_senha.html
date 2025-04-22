@@ -16,29 +16,34 @@
 
                         <h3 class="heading">Recuperar Senha</h3>
 
-                        <div class="input-box">
-                            <input type="email" required>
+                        <div class="input-box" id="email-box">
+                            <input type="email" id="email" required>
                             <span>Email</span>
                         </div>
-
-                        <div class="input-box">
-                            <input type="text" id="verification-code" required oninput="showPasswordFields()">
+                        
+                        <!-- Código de Verificação -->
+                        <div class="input-box hidden" id="code-box">
+                            <input type="text" id="verification-code" required>
                             <span>Código de Verificação</span>
                         </div>
-
+                        
+                        <!-- Campos de Nova Senha -->
                         <div id="password-fields" class="hidden">
                             <div class="input-box">
-                                <input type="password" required>
+                                <input type="password" id="new-password" required>
                                 <span>Nova Senha</span>
                             </div>
-
+                        
                             <div class="input-box">
-                                <input type="password" required>
+                                <input type="password" id="confirm-password" required>
                                 <span>Confirmar Nova Senha</span>
                             </div>
                         </div>
-
-                        <button class="btn">Redefinir Senha</button>
+                        
+                        <!-- Botões -->
+                        <button id="send-code-btn" class="btn" onclick="sendCode()">Enviar Código</button>
+                        <button id="confirm-code-btn" class="btn hidden" onclick="confirmCode()">Confirmar Código</button>
+                        <button id="reset-password-btn" class="btn hidden">Redefinir Senha</button>
                         
                         <div>
                             <a href="login.html" class="cadastro">Voltar para o Login</a>
