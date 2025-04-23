@@ -204,9 +204,8 @@ header{
 
 
 }
-/*  HEADER *//*  HEADER *//*  HEADER *//*  HEADER */
 
-/* MAIN CONTENT *//* MAIN CONTENT *//* MAIN CONTENT */
+
 main{
     background-color: #ebebeb;
 }
@@ -324,10 +323,12 @@ main{
     }
 
     .exclusive-container{
+        width: 100%;
         flex-direction: column-reverse;
     }
 
     .exclusive-container img{
+        width: 100%;
         margin-bottom: 4rem;
 
     }
@@ -373,3 +374,15 @@ main{
 .testimonial p:last-child{
     font-weight: bold;
 }
+
+@media (max-width: 800px){
+
+    .testimonials{
+        flex-direction: column;
+    }
+
+    .testimonial{
+        margin-bottom: 1.2rem;
+    }
+}
+
