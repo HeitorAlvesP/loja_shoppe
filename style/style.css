@@ -189,7 +189,7 @@ header{
     }
 
     .show-menu nav{
-        display: block;
+        display: none;
     }
 
     nav ul{
@@ -227,11 +227,6 @@ main{
     padding: 4rem 1rem;
 }
 
-
-/* .cols-3{
-    grid-template-columns: repeat(3, 1fr);
-    gap: 3rem;
-} */
 
 .cols-3 {
     display: grid;
@@ -297,3 +292,36 @@ main{
 .produto-price span{
     font-weight: 600;
 }
+
+.exclusive-container{
+    color: #ffff;
+    flex-direction: row-reverse;
+    padding: 5rem 1rem;
+}
+
+.exclusive-container img{
+    max-width: 500px;
+}
+
+
+@media (max-width: 800px){
+    .section-title{
+        font-size: 1rem;
+    }
+
+    .cols-3{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .cols-4{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .produto-nome, .produto-price, .rate{
+        max-height: 1rem;
+        overflow: hidden;
+        font-size: 0.8rem;
+    }
+
+}
+
