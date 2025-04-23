@@ -1,74 +1,55 @@
 :root {
     --cor_primeria: #1C082D;
-    --cor-back_fundo: #E0E0E0;
+    --cor-back_fundo: #ffffffd0;
     --cor_segundaria: #0295E5;
     --cor_back: #2c2c2c;
+    /* --cor_back: #2c2c2c; */
 }
 
 body {
     background-color: var(--cor-back_fundo);
     font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
-
-
-/* .logo-container {
-    position: absolute;
-    top: 50%;
-    left: 20%; 
-    transform: translateY(-50%);
-    max-width: 90vw;
-}
-
-
-.logo-img img {
-    border-radius: 5px;
-    width: 530px;
-    height: auto;
-    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.5));
-}
-
-
-.center {
-    position: absolute;
-    top: 50%;
-    right: 20%; 
-    transform: translateY(-50%);
-    max-width: 90vw;
-    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.5));
-} */
 
 .logo-container {
+    max-width: 100%;
     position: absolute;
     top: 50%;
     left: 20%;
     transform: translateY(-50%);
     max-width: 90vw;
+    display: block;
+    transition: visibility 0.3s, opacity 0.3s;
 }
 
 .logo-img img {
     border-radius: 5px;
-    width: 527px; /* Tamanho inicial da imagem */
+    width: 530px;
+    max-width: 100%;
     height: auto;
     filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.5));
+    transition: width 0.3s;
 }
 
-/* Div centralizada (login) */
 .center {
     position: absolute;
     top: 50%;
     right: 20%;
     transform: translateY(-50%);
     max-width: 90vw;
-    filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.5));
 }
-
-
-
 
 .card {
     overflow: hidden;
     width: 450px;
     height: 530px;
+    background-color: white; /* Garantindo que o fundo do login esteja sempre visível */
 }
 
 .content {
@@ -110,7 +91,6 @@ body {
     height: 99%;
     background: var(--cor_primeria);
     border-radius: 5px;
-    /* color: blackf; */
     color: #ffff;
     display: flex;
     flex-direction: column;
@@ -242,32 +222,36 @@ button:hover{
     text-decoration: none;
 }
 
-@media (max-width: 1024px) {
-    .logo-container {
-        left: 5%; /* Ajustando a distância da logo */
-        max-width: 45vw; /* A imagem e a div de login não ocuparão mais de 45% da largura da tela */
+@media (max-width: 800px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100vh;
+        margin: 0;
+        padding: 20px;
+        overflow: auto;
     }
 
-    .logo-img img {
-        width: 100%; /* A imagem vai se ajustar automaticamente à largura da .logo-container */
+    .logo-container {
+        display: none !important;
     }
 
     .center {
-        max-width: 70vw; /* Ajusta a largura da div de login */
-    }
-}
-
-/* Media query para telas muito pequenas (celular) */
-@media (max-width: 768px) {
-    .logo-container {
-        display: none; /* A logo some em telas muito pequenas */
+        width: 100%;
+        left: 10%;
+        align-items: center;
+        max-width: 400px;
+        margin: 0 auto;
     }
 
-    .center {
-        top: 50%;
-        left: 50%; /* Centraliza a div de login */
-        transform: translate(-50%, -50%); /* Garante que a div seja centralizada corretamente */
-        right: auto;
-        max-width: 90vw; /* Aumenta o espaço para a div de login */
+    .card {
+        width: 100%;
+        margin: 0 auto;
+        align-items: center;
+        left: 20%;
+        padding: 20px;
+        box-sizing: border-box;
     }
 }
