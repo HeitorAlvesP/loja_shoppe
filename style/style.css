@@ -323,5 +323,17 @@ main{
         font-size: 0.8rem;
     }
 
+    .exclusive-container{
+        flex-direction: column-reverse;
+    }
+
+    .exclusive-container img{
+        margin-bottom: 4rem;
+
+    }
 }
+
+
+
+
 
