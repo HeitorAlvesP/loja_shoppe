@@ -25,7 +25,7 @@ body{
     margin-right: auto;
 }
 
-/*  navbar *//*  navbar *//*  navbar *//*  navbar */
+
 .navbar {
     background-color:var(--cor_primeria);
     padding: 1rem;
@@ -103,9 +103,8 @@ nav ul li a:hover{
 .menu-button{
     display: none;
 }
-/*  navbar *//*  navbar *//*  navbar *//*  navbar */
 
-/*  HEADER *//*  HEADER *//*  HEADER *//*  HEADER */
+
 header{
     background-image: radial-gradient(#ffff, #c7c7c7);
 }
@@ -133,7 +132,6 @@ header{
 }
 
 .header-bottom-side-left button{
-    /* background-color: #0084ff; */
     background-color: var(--cor_segundaria);
     border: none;
     cursor: pointer;
@@ -146,7 +144,6 @@ header{
 }
 
 .header-bottom-side-left button:hover{
-    /* background-color: #004c94; */
     background-color: #00669c;
 }
 
@@ -162,7 +159,6 @@ header{
 }
 
 
-/*media queries*//*media queries*//*media queries*/
 @media (max-width: 800px){
     .logo{
         font-size: 1.2rem;
@@ -185,7 +181,6 @@ header{
         border-bottom-right-radius: 7px;
         width: 100%;
         top: 46px;
-        display: none;
     }
 
     .show-menu nav{
@@ -391,6 +386,7 @@ main{
     align-items: center;
     color: #8f8f8f;
     padding: 4rem 1rem;
+    gap: 2rem;
 }
 
 .dowload-options>*{
@@ -406,9 +402,10 @@ main{
     display: flex;
 }
 
-.dowload-options>*{
+.dowload-options>div img{
     width: 180px;
 }
+
 
 .logo-footer{
     text-align: center;
@@ -417,4 +414,44 @@ main{
 .links-footer h3{
     color: #ffff;
     margin-bottom: 0.8rem;
+}
+
+.links-footer ul{
+    list-style: none;
+}
+
+.links-footer ul li{
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+}
+
+.copyright{
+    width: 100%;
+    color: #ffff;
+    padding: 2rem, 0;
+    text-align: center;
+}
+
+@media (max-width: 800px){
+    .footer-content{
+        display: inline;
+        font-size: 0.8rem;
+    }
+
+    .footer-content>div{
+        padding: 1rem;
+    }
+
+    .dowload-options>div{
+        display: inline;
+    }
+
+    .dowload-options>div img{
+        width: 120px;
+    }
+
+    .copyright{
+        font-size: 0.8rem;
+        width: 100%;
+    }
 }
