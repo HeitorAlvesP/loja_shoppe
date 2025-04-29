@@ -386,3 +386,35 @@ main{
     }
 }
 
+.footer-content{
+    display: flex;
+    align-items: center;
+    color: #8f8f8f;
+    padding: 4rem 1rem;
+}
+
+.dowload-options>*{
+    margin: 1rem 0;
+}
+
+.dowload-options>p:first-child{
+    font-weight: bold;
+    color: #ffff;
+}
+
+.dowload-options>div{
+    display: flex;
+}
+
+.dowload-options>*{
+    width: 180px;
+}
+
+.logo-footer{
+    text-align: center;
+}
+
+.links-footer h3{
+    color: #ffff;
+    margin-bottom: 0.8rem;
+}
