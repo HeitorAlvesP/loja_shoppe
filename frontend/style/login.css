@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: var(--cor-back_fundo);
+    background-color: var(--cor_back);
     font-family: sans-serif;
     margin: 0;
     padding: 0;
