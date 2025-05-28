@@ -1,0 +1,4 @@
+-> Reitrar o login da nav-bar
+-> Utilizar um modal para exiir a parte de login, semelhante ao que utilizei no site do cavalo
+-> Após login lá vai haver uma mensagem
+////------------------////
