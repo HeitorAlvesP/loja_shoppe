@@ -11,9 +11,18 @@ const PORT = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, 'frontend', 'public')));
 app.use(express.static(path.join(__dirname, 'frontend')));
 
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend', 'html', 'index.html'));
-});
+
+const serveHtml = (fileName) => {
+    return (req, res) => {
+        res.sendFile(path.join(__dirname, 'frontend', 'html', fileName));
+    };
+};
+
+app.get('/', serveHtml('index.html'));
+app.get('/login', serveHtml('login.html'));
+app.get('/registrar', serveHtml('cadastro_login.html'));
+app.get('/senha', serveHtml('esqueceu_senha.html'));
+
 
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);

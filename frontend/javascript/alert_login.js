@@ -23,6 +23,6 @@ loginForm.addEventListener('submit', function (event) {
         showConfirmButton: false,
         timer: 1500
     }).then(() => {
-        window.location.href = 'index.html'; // Redireciona após sucesso
+        window.location.href = '/'; 
     });
 });

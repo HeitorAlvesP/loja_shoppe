@@ -164,7 +164,7 @@ function validatePasswords() {
         title: 'Senha atualizada!',
         text: 'Sua senha foi redefinida com sucesso.',
     }).then(() => {
-        window.location.href = 'login.html';
+        window.location.href = '/login';
     });;
 
 }
