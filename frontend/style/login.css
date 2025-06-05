@@ -101,7 +101,6 @@ body {
     backdrop-filter: blur(20px);
 }
 
-
 @keyframes rotation-123 {
     0%{
         transform: rotateZ(0deg);
