@@ -1,7 +1,9 @@
 import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { initDb } from './database/config/db.js';
 import { loginUser } from './backend/controllers/loginController.js';
+import { registerUser } from './backend/controllers/registrarController.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -29,7 +31,15 @@ app.get('/senha', serveHtml('esqueceu_senha.html'));
 app.post('/api/login', loginUser);
 
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Servidor rodando em http://localhost:${PORT}`);
-});
+(async () => {
+    await initDb();
+    
+    // Rotas
+    app.post('/api/login', loginUser);
+    app.post('/api/register', registerUser);
+
+    app.listen(3000, () => {
+        console.log('🚀 Servidor rodando em http://localhost:3000');
+        console.log('📊 Banco de dados pronto');
+    });
+})();

@@ -1,18 +1,26 @@
-//SIMULANDO DB
+import { User } from '../../database/models/User.js'; // Caminho ajustado
+import bcrypt from 'bcrypt'
 
-export const loginUser = (req, res) => {
-    // Adicione um log para debug
-    console.log("Recebido:", req.body);
-    
-    if (!req.body || typeof req.body !== 'object') {
-        return res.status(400).json({ error: "Dados inválidos!" });
-    }
-
+export const loginUser = async (req, res) => {
     const { email, senha } = req.body;
 
-    if (!email || !senha) {
-        return res.status(400).json({ error: "Preencha todos os campos!" });
-    }
+    try {
+        const user = await User.findByEmail(email);
+        if (!user) {
+            return res.status(401).json({ error: "Credenciais inválidas" });
+        }
 
-    res.json({ success: true, message: "Login realizado com sucesso!" });
+        const senhaValida = await bcrypt.compare(senha, user.senha);
+        if (!senhaValida) {
+            return res.status(401).json({ error: "Credenciais inválidas" });
+        }
+
+        // Remove a senha antes de enviar a resposta
+        const { senha: _, ...userData } = user; 
+        res.json({ success: true, user: userData });
+
+    } catch (error) {
+        console.error("Erro no login:", error);
+        res.status(500).json({ error: "Erro interno no servidor" });
+    }
 };
