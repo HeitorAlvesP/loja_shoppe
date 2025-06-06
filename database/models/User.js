@@ -4,12 +4,16 @@ import bcrypt from 'bcrypt';
 export class User {
     static async create({ email, senha, nome }) {
         const db = await getDbConnection();
-        const hashedSenha = await bcrypt.hash(senha, 10);
+
+        // const hashedSenha = await bcrypt.hash(senha, 10);
+        const senhaValida = senha === user.senha;
+        
+
         try {
             const { lastID } = await db.run(
                 `INSERT INTO users (email, senha, nome) 
                  VALUES (?, ?, ?)`,
-                [email, hashedSenha, nome]
+                [email, senhaValida, nome]
             );
             return lastID;
         } finally {
