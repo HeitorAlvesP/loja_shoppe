@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", async () => {
     const btn = document.querySelector('.btn');
     const inputs = document.querySelectorAll('.input-box input');
 
@@ -71,4 +71,36 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = "/"
         });
     });
+    try {
+        const response = await fetch('/api/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                nome: nome.value,
+                email: email.value,
+                senha: senha.value // Envia texto puro
+            })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            throw new Error(data.error || "Erro no cadastro");
+        }
+
+        await Swal.fire({
+            icon: 'success',
+            title: 'Cadastro realizado!',
+            text: data.message
+        });
+
+        window.location.href = "/";
+
+    } catch (error) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Erro no cadastro',
+            text: error.message
+        });
+    }
 });

@@ -30,6 +30,7 @@ loginForm.addEventListener('submit', async (event) => {
 
         //Só para conferir se pe um json
         const contentType = response.headers.get('content-type');
+        
         if (!contentType || !contentType.includes('application/json')) {
             throw new Error("Resposta não é JSON");
         }
