@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
             title: 'Cadastro realizado!',
             text: 'Seu cadastro foi feito com sucesso!'
         }).then(() => {
-            window.location.href = "../html/login.html"
+            window.location.href = "/"
         });
     });
 });

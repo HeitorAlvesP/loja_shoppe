@@ -38,7 +38,7 @@ loginForm.addEventListener('submit', async (event) => {
 
         if (!response.ok) throw new Error(data.error || "Erro no login");
 
-        Swal.fire({ icon: 'success', title: data.message, timer: 1500 })
+        Swal.fire({ icon: 'success', title: 'Login realizado', timer: 1500 })
             .then(() => window.location.href = '/');
     } catch (error) {
         Swal.fire({ 

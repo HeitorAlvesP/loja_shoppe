@@ -6,14 +6,14 @@ export class User {
         const db = await getDbConnection();
 
         // const hashedSenha = await bcrypt.hash(senha, 10);
-        const senhaValida = senha === user.senha;
+        const hashedSenha = senha;
         
 
         try {
             const { lastID } = await db.run(
                 `INSERT INTO users (email, senha, nome) 
                  VALUES (?, ?, ?)`,
-                [email, senhaValida, nome]
+                [email, hashedSenha, nome]
             );
             return lastID;
         } finally {
