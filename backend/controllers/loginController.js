@@ -1,5 +1,4 @@
 import { User } from '../../database/models/User.js'; // Caminho ajustado
-import bcrypt from 'bcrypt'
 
 export const loginUser = async (req, res) => {
     const { email, senha } = req.body;

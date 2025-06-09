@@ -28,8 +28,6 @@ app.get('/login', serveHtml('login.html'));
 app.get('/registrar', serveHtml('cadastro_login.html'));
 app.get('/senha', serveHtml('esqueceu_senha.html'));
 
-app.post('/api/login', loginUser);
-
 
 (async () => {
     await initDb();

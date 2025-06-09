@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         nome.value = nome.value.toUpperCase();
     });
 
-    btn.addEventListener('click', (e) => {
+    btn.addEventListener('click', async (e) => {
         e.preventDefault();
 
         if (
@@ -71,10 +71,14 @@ document.addEventListener("DOMContentLoaded", async () => {
             window.location.href = "/"
         });
     });
+
     try {
         const response = await fetch('/api/register', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: { 
+                'Content-Type': 'application/json', 
+                'Accept': 'application/json'
+            },
             body: JSON.stringify({
                 nome: nome.value,
                 email: email.value,
