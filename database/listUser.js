@@ -1,4 +1,4 @@
-import { getDbConnection } from './database/config/db.js';
+import { getDbConnection } from './config/db.js';
 
 (async () => {
   const db = await getDbConnection();
@@ -12,3 +12,6 @@ import { getDbConnection } from './database/config/db.js';
   console.log('Usuários:', users);
   await db.close();
 })();
+
+//node lisUser.js
+//Rode isso para ver os usuários pelo terminal

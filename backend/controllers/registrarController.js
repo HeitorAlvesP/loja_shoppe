@@ -1,31 +1,27 @@
 import { User } from '../../database/models/User.js'; // Caminho corrigido
 
 export const registerUser = async (req, res) => {
-    const { nome, email, senha } = req.body;
-
     try {
-        // Validação de email
-        if (!email.includes('@')) {
-            return res.status(400).json({ error: "Email inválido" });
+        const { nome, email, senha } = req.body;
+
+        // Validação básica
+        if (!nome || !email || !senha) {
+            console.log('Dados recebidos:', req.body); // Debug
+            return res.status(400).json({ error: "Todos os campos são obrigatórios" });
         }
 
-        // Verifica se usuário já existe
+        // Verifica e-mail existente
         const existingUser = await User.findByEmail(email);
         if (existingUser) {
-            return res.status(409).json({ error: "Email já cadastrado" });
+            return res.status(409).json({ error: "E-mail já cadastrado" });
         }
 
-        // Cria usuário (senha em texto puro)
-        const userId = await User.create({
-            nome: nome.toUpperCase(),
-            email,
-            senha // Sem hash
-        });
-
-        res.status(201).json({
+        // Cria usuário
+        await User.create({ nome, email, senha });
+        
+        res.status(201).json({ 
             success: true,
-            message: "Usuário registrado com sucesso",
-            userId
+            message: "Usuário registrado com sucesso"
         });
 
     } catch (error) {
