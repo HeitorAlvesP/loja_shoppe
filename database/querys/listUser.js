@@ -1,4 +1,4 @@
-import { getDbConnection } from './config/db.js';
+import { getDbConnection } from '../config/db.js';
 
 (async () => {
   const db = await getDbConnection();

@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 body: JSON.stringify({
                     nome: nome.value.trim(),
                     email: email.value.trim(),
-                    senha: senha.value // Não usar trim() na senha
+                    senha: senha.value 
                 })
             });
 
