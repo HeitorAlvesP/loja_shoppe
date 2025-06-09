@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 export async function getDbConnection() {
     return open({
-        filename: path.join(__dirname, '../database.sqlite'),
+        filename: path.join(__dirname, '../data/BaseDeDados.sqlite'),
         driver: sqlite3.Database
     });
 }
